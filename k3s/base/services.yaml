@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: plex-media-service
+spec:
+  selector:
+    app: plex-media
+  ports:
+    - port: 8080
+      targetPort: 32400
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: plex-media-remote
+spec:
+  type: LoadBalancer
+  selector:
+    app: plex-media
+  ports:
+    - protocol: TCP
+      name: plex-media-remote
+      port: 32400
+    - protocol: TCP
+      name: plex-for-roku
+      port: 8324
+    - protocol: TCP
+      name: dlna-server01
+      port: 32469
+  externalIPs:
+    - 10.0.1.244

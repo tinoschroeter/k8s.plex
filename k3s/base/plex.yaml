@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: plex-media
+  name: plex-media
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: plex-media
+  template:
+    metadata:
+      labels:
+        app: plex-media
+    spec:
+      containers:
+      - name: plex-media
+        image: linuxserver/plex:1.24.2.4973-2b1b51db9-ls74
+        envFrom:
+        - configMapRef:
+            name: plex-config
+        volumeMounts:
+        - name: plex-data
+          mountPath: /mnt/disks/library/videos
+        - name: plex-config
+          mountPath: /config/Library
+      volumes:
+      - name: plex-data
+        persistentVolumeClaim:
+          claimName: plex-pvc-data
+      - name: plex-config
+        persistentVolumeClaim:
+          claimName: plex-pvc-config

@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: plex-config
+data:
+  SET_PLEX_UID: "65534"
+  SET_PLEX_GID: "65534"
+  PLEX_USER_NAME: "nobody"
+  VERSION: "docker"
+  ADVERTISE_IP: "https://plex.tino.sh"
+  TZ: "Europe/Berlin"
+  UMASK_SET: "022"
+  PLEX_CLAIM: "claim-QrWE1xExsE4XDda1jz5R"

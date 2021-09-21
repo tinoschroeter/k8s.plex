@@ -1,0 +1,6 @@
+---
+namespace: plex-media
+resources:
+  - pvc.yml
+  - services.yaml
+  - plex.yaml
