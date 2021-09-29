@@ -1,5 +1,7 @@
 # Plex Media Server
 
+[![Build Status](https://jenkins.tino.sh/buildStatus/icon?job=k8s.plex%2Fmaster)](https://jenkins.tino.sh/job/k8s.plex/job/master/)
+
 [Plex](https://plex.tv) organizes video, music and photos from personal media libraries and streams them to smart TVs, 
 streaming boxes and mobile devices. This container is packaged as a standalone Plex Media Server. has always been a top priority. 
 Straightforward design and bulk actions mean getting things done faster.
