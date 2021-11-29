@@ -2,6 +2,7 @@
 
 [![Build Status](https://jenkins.tino.sh/buildStatus/icon?job=k8s.plex%2Fmaster)](https://jenkins.tino.sh/job/k8s.plex/job/master/)
 [![k3s](https://img.shields.io/badge/run%20on%20-Raspberry%20Pi-red)](https://github.com/tinoschroeter/k8s.homelab)
+[![GitHub Super-Linter](https://github.com/tinoschroeter/k8s.plex/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/tinoschroeter/k8s.plex/actions/workflows/linter.yml)
 
 [Plex](https://plex.tv) organizes video, music and photos from personal media libraries and streams them to smart TVs, 
 streaming boxes and mobile devices. This container is packaged as a standalone Plex Media Server. has always been a top priority. 
