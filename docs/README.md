@@ -22,8 +22,8 @@ Straightforward design and bulk actions mean getting things done faster.
 These parameters are usually not required but some special setups may benefit from their use.  
 As in the previous section, each is treated as first-run parameters only:
 
-- **PLEX_UID** The user id of the `plex` user created inside the container.
-- **PLEX_GID** The group id of the `plex` group created inside the container
+- **PLEX_UID** The user ID of the `plex` user created inside the container.
+- **PLEX_GID** The group ID of the `plex` group created inside the container
 - **CHANGE_CONFIG_DIR_OWNERSHIP** Change ownership of config directory to the plex user.  Defaults to `true`.  
   If you are certain permissions are already set such that the `plex` user within the container can read/write data in it's config directory, 
   you can set this to `false` to speed up the first run of the container.
