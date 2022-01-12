@@ -22,9 +22,7 @@ As in the previous section, each is treated as first-run parameters only:
 
 - **PLEX_UID** The user ID of the `plex` user created inside the container.
 - **PLEX_GID** The group ID of the `plex` group created inside the container
-- **CHANGE_CONFIG_DIR_OWNERSHIP** Change ownership of config directory to the plex user.  Defaults to `true`.  
-  If you are certain permissions are already set such that the `plex` user within the container can read/write data in it's config directory, 
-  you can set this to `false` to speed up the first run of the container.
+- **CHANGE_CONFIG_DIR_OWNERSHIP** Change ownership of config directory to the plex user.  Defaults to `true`. If you are certain permissions are already set such that the `plex` user within the container can read/write data in it's config directory, you can set this to `false` to speed up the first run of the container.
 - **ALLOWED_NETWORKS** IP/netmask entries which allow access to the server without requiring authorization. We recommend you set this only if you do not sign in your server.
   For example `192.168.1.0/24,172.16.0.0/16` will allow access to the entire `192.168.1.x` range and the `172.16.x.x` range.  
   Note: If you are using Bridge networking, then localhost will appear to plex as coming from the docker networking gateway which is often `172.16.0.1`.
